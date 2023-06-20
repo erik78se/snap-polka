@@ -16,4 +16,4 @@ parts:
     plugin: dump
     source: .
     organize:
-      bin/start.sh: bin/start.sh
+      bin/start.sh: bin/polka
