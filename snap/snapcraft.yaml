@@ -17,5 +17,5 @@ parts:
     source: https://github.com/erik78se/polka.git
     source-tag: v0.9.44
     override-pull: |
-      snapcraftctl pull
-      snapcraftctl set-version "v0.9.44"
+      craftctl default
+      craftctl set version="$(git describe --tags --abbrev=10)-$(git rev-parse --short HEAD)"
