@@ -9,11 +9,9 @@ confinement: strict
 
 apps:
   polka:
-    command: bin/start.sh
+    command: bin/polka
 
 parts:
   polka-app:
     plugin: dump
     source: .
-    prime:
-      - bin/start.sh: bin/polka
