@@ -15,5 +15,5 @@ parts:
   polka-app:
     plugin: dump
     source: .
-    organize:
-      bin/start.sh: bin/polka
+    prime:
+      - bin/start.sh: bin/polka
