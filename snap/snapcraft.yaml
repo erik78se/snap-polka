@@ -1,8 +1,8 @@
 name: polka
 base: core22
-version: '1.0'
 summary: Polka Snap App
 description: A Snap package for the Polka app.
+adopt-info: polka-app
 
 grade: stable
 confinement: strict
@@ -14,4 +14,8 @@ apps:
 parts:
   polka-app:
     plugin: dump
-    source: .
+    source: https://github.com/erik78se/polka.git
+    source-tag: v0.9.44
+    override-pull: |
+      snapcraftctl pull
+      snapcraftctl set-version "v0.9.44"
