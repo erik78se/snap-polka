@@ -1,0 +1,19 @@
+name: polka
+base: core22
+version: '1.0'
+summary: Polka Snap App
+description: A Snap package for the Polka app.
+
+grade: stable
+confinement: strict
+
+apps:
+  polka:
+    command: bin/start.sh
+
+parts:
+  polka-app:
+    plugin: dump
+    source: .
+    organize:
+      bin/start.sh: bin/start.sh
